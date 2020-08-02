@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "DEBUG=socket.io:client ./node_modules/coffee-script/bin/coffee server.coffee"
+  },
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "coffee-script": "^1.9.3",
+    "node-uuid": "^1.4.3",
+    "socket.io": "^1.3.5",
+    "underscore": "^1.8.3"
+  }
+}
