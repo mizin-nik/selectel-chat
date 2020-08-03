@@ -1,0 +1,63 @@
+.ui-input {
+  & {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  & input {
+    outline: none;
+    -webkit-appearance: none;
+  }
+  &-text {
+    display: block;
+    width: 100%;
+    padding: 3% 4%;
+    background: #ffffff;
+    font-family: 'Rubik', 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: $txtDark;
+    border: 1px solid #24313f;
+    border-radius: 7px;
+    transition: .35s ease-in-out;
+  }
+  &-text.light-input {
+    border: none;
+    border-bottom: 1px solid #24313f;
+    border-radius: 0;
+    padding: 2% 0;
+  }
+  &-text.light-input:focus::placeholder {
+    color: $ctaHelper;
+  }
+  &-text:focus {
+    border-color: #0190AF;
+  }
+  &-text:focus ~ &-placeholder {
+    color: #0190AF;
+  }
+  &-text::placeholder {
+    font-family: 'Rubik', 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #c5c8ca;
+    transition: .35s ease-in-out;
+  }
+  &-placeholder {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    padding: 0 1%;
+    background: #ffffff;
+    font-family: 'Rubik', 'Helvetica', sans-serif;
+    font-size: 11px;
+    line-height: 22px;
+    color: #24313f;
+    transition: .35s ease-in-out;
+    z-index: 1;
+  }
+}

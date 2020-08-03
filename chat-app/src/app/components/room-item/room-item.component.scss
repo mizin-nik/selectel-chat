@@ -1,0 +1,83 @@
+.room-item {
+  &--enter {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--messages {
+    & {
+      position: absolute;
+      display: flex;
+      display: -webkit-flex;
+      align-items: flex-end;
+      flex-direction: column;
+      flex-flow: column-reverse;
+      width: 100%;
+      bottom: 50px;
+      height: calc(100% - 110px);
+      padding: 4%;
+      overflow-x: auto;
+    }
+    &-item {
+      position: relative;
+      width: 100%;
+      margin: 5px;
+    }
+    &-item p.bool {
+      display: inline-block;
+      position: relative;
+      padding: 10px 20px;
+      background: #3d5063;
+      border-radius: 10px;
+      color: #ffffff;
+    }
+    &-item p.bool:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 6px solid #3d5063;
+      border-right: 3px solid transparent;
+      border-top: 3px solid #3d5063;
+      border-bottom: 4px solid transparent;
+      left: 10px;
+      bottom: -6px;
+    }
+    &-item.self {
+      text-align: right;
+    }
+    &-item.self p.bool {
+      background: #29a6bb;
+    }
+    &-item.self p.bool:before{
+      right: 10px;
+      left: auto;
+      transform: rotateY(180deg);
+      border-left-color: #29a6bb;
+      border-top-color: #29a6bb;
+    }
+  }
+
+  &--sender {
+    & {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      border-top: 1px solid rgb(48 67 87 / 53%);
+    }
+    & input {
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

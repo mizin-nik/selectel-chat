@@ -1,0 +1,19 @@
+//
+// @include transition(.2s, ease-in);
+//
+@mixin transition($time, $type: linear) {
+  transition: $time $type;
+  -webkit-transition: $time $type;
+  -moz-transition: $time $type;
+  -o-transition: $time $type;
+}
+
+//
+// @include transition-prop(prop, .2s, ease-in);
+//
+@mixin transition-prop($prop, $time, $type: linear) {
+  transition: $prop $time $type;
+  -webkit-transition: $prop $time $type;
+  -moz-transition: $prop $time $type;
+  -o-transition: $prop $time $type;
+}

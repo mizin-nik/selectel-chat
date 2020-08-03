@@ -1,0 +1,78 @@
+.ui-animate {
+  &-side-in {
+    @include animation-name(sideIn);
+    @include animation-duration(.5s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+  }
+  &-side-in-right {
+    @include animation-name(sideInRight);
+    @include animation-duration(.35s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+  }
+  &-side-out {
+    @include animation-name(sideOut);
+    @include animation-duration(.5s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+  }
+  &-side-out-right {
+    @include animation-name(sideOutRight);
+    @include animation-duration(.4s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+  }
+}
+
+@include keyframes(sideIn) {
+  0%{
+    @include transform(translate3d(0, 10%, 0));
+    opacity: 0;
+  }
+  100%{
+    @include transform(translate3d(0, 0, 0));
+    opacity: 1;
+  }
+}
+
+@include keyframes(sideInRight) {
+  0%{
+    @include transform(translate3d(20%, 0, 0));
+    opacity: 0;
+  }
+  60%{
+    @include transform(translate3d(-10%, 0, 0));
+    opacity: 0.6;
+  }
+  100%{
+    @include transform(translate3d(0, 0, 0));
+    opacity: 1;
+  }
+}
+
+@include keyframes(sideOut) {
+  0%{
+    @include transform(translate3d(0, 0, 0));
+    opacity: 1;
+  }
+  100%{
+    @include transform(translate3d(0, 10%, 0));
+    opacity: 0;
+  }
+}
+
+@include keyframes(sideOutRight) {
+  0%{
+    @include transform(translate3d(0, 0, 0));
+    opacity: 1;
+  }
+  40%{
+    @include transform(translate3d(-10%, 0, 0));
+    opacity: 1;
+  }
+  100%{
+    @include transform(translate3d(20%, 0, 0));
+    opacity: 0;
+  }
+}

@@ -1,0 +1,8 @@
+//
+//@include text-shorten();
+//
+@mixin text-shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,12 @@
+//
+// Base transition property.
+//
+.txt-smoothly {
+  @include transition-prop(color, .2s, linear);
+}
+.border-smoothly {
+  @include transition-prop(border-color, .2s, linear);
+}
+.bg-smoothly {
+  @include transition-prop(background, .2s, linear);
+}

@@ -1,0 +1,16 @@
+<div class="user-model">
+  <form [formGroup]="RoomModelForm" (ngSubmit)="onSave()">
+    <div class="row">
+      <h5>Создать комату</h5>
+    </div>
+    <div class="ui-input mt-3 mb-3">
+      <input type="text" class="ui-input-text" formControlName="name" autofocus>
+      <span class="ui-input-placeholder">Название комнаты</span>
+    </div>
+    <div class="grid justify-content-center">
+      <div class="col-6">
+        <button class="ui-button ui-button-default small">Создать</button>
+      </div>
+    </div>
+  </form>
+</div>

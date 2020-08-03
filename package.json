@@ -5,7 +5,7 @@
     "dep": "cd socket && npm i && cd ../chat-app && npm i",
     "socket": "cd socket && npm run start",
     "chat-app": "cd chat-app && npm run app:serve",
-    "app:start": "npm-run-all dep --parallel socket chat-app"
+    "app:start": "npm-run-all --parallel socket chat-app"
   },
   "dependencies": {},
   "devDependencies": {

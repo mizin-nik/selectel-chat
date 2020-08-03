@@ -1,0 +1,110 @@
+@function col-width($i, $columns) {
+  @return 100% / $columns * $i;
+}
+
+@mixin col-props($i, $columns, $gutter) {
+  width: col-width($i, $columns);
+  padding-left: $gutter/2 + px;
+  padding-right: $gutter/2 + px;
+}
+
+@mixin columns-loop($columns, $gutter) {
+  @for $i from 0 through $columns {
+    &-#{$i} {
+      @include col-props($i, $columns, $gutter);
+    }
+    &-#{$i}.no-padding {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+@mixin margin-loop($name, $columns, $gutter) {
+  @for $i from 0 through $columns {
+    @if $name {
+      &-#{$i} {
+        margin-#{$name}: ($gutter * $i)  / 2 + px !important;
+      }
+    } @else {
+      &-#{$i} {
+        margin: ($gutter * $i)  / 2 + px !important;
+      }
+    }
+  }
+}
+
+@mixin padding-loop($name, $columns, $gutter) {
+  @for $i from 0 through $columns {
+    @if $name {
+      &-#{$i} {
+        padding-#{$name}: ($gutter * $i)  / 2 + px !important;
+      }
+    } @else {
+      &-#{$i} {
+        padding: ($gutter * $i)  / 2 + px !important;
+      }
+    }
+  }
+}
+
+.grid {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.row {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.col {
+  @include columns-loop(12, 16);
+}
+
+.m {
+  @include margin-loop(null, 12, 16);
+}
+
+.ml {
+  @include margin-loop(left, 12, 16);
+}
+
+.mr {
+  @include margin-loop(right, 12, 16);
+}
+
+.mt {
+  @include margin-loop(top, 12, 16);
+}
+
+.mb {
+  @include margin-loop(bottom, 12, 16);
+}
+
+.p {
+  @include padding-loop(null, 12, 16);
+}
+
+.pl {
+  @include padding-loop(left, 12, 16);
+}
+
+.pr {
+  @include padding-loop(right, 12, 16);
+}
+
+.pt {
+  @include padding-loop(top, 12, 16);
+}
+
+.pb {
+  @include padding-loop(bottom, 12, 16);
+}

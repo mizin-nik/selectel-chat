@@ -1,0 +1,52 @@
+<div class="pg-side--event">
+  <div class="side-event">
+    <div class="side-event--item" (click)="onCreateRoom()">
+      <div class="mdi mdi-square-edit-outline"></div>
+      <p>Новая комната</p>
+    </div>
+  </div>
+</div>
+<div class="pg-side--view">
+  <div class="side-content __tabs-content" data-tab-content="users">
+    <ng-container *ngFor="let user of UsersList">
+      <div class="side-content--item">
+        <div class="side-content--avatar">
+          <div class="mdi mdi-account"></div>
+        </div>
+        <div class="side-content--group">
+          <div class="side-content--group-head">
+            <p class="small">{{user.name}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="side-content __tabs-content active" data-tab-content="rooms">
+    <ng-container *ngFor="let room of RoomsList">
+      <div class="side-content--item" routerLink="/rooms-view/{{room.id}}" routerLinkActive="active">
+        <div class="side-content--avatar">
+          <div class="mdi mdi-account-multiple"></div>
+        </div>
+        <div class="side-content--group">
+          <div class="side-content--group-head">
+            <p>{{room.name}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="pg-side--menu">
+  <div class="side-menu">
+    <div class="side-menu--item __tabs-link" data-tab-view="users">
+      <div class="mdi mdi-account-group"></div>
+    </div>
+    <div class="side-menu--item __tabs-link active" data-tab-view="rooms">
+      <div class="mdi mdi-chat-outline"></div>
+    </div>
+    <div class="side-menu--item __tabs-link" routerLink="/settings-view">
+      <div class="mdi mdi-cog-outline"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="row height-full">
+  <div class="grid p-2">
+    <div class="col-8">
+      <h5>{{RoomName}}</h5>
+    </div>
+    <div class="col-4 text-right">
+      <div class="grid align-items-center justify-content-end">
+        <button class="ui-button ui-button-addition small" (click)="onLeaveRoom()" *ngIf="RoomEntered">Покинуть комнату</button>
+        <div class="mdi mdi-close-thick cta ml-2" routerLink="/rooms-view"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="room-item--messages" *ngIf="RoomEntered">
+    <ng-container *ngFor="let message of RoomMessages">
+      <div class="room-item--messages-item" [ngClass]="message.user === storageUserModel.id ? 'self' : ''">
+        <p class="bool">{{message.body}}</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="room-item--sender" *ngIf="RoomEntered">
+    <form [formGroup]="RoomMessageForm" (ngSubmit)="onSendMessage()">
+      <div class="grid height-full align-items-center">
+        <div class="col-10">
+          <input type="text" placeholder="Новое сообщение" formControlName="message" autofocus>
+        </div>
+        <div class="col-2 text-right">
+          <div class="mdi mdi-send cta"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="room-item--enter" *ngIf="!RoomEntered">
+    <button class="ui-button ui-button-default small" (click)="onJoinRoom()">Войти в комнату</button>
+  </div>
+</div>

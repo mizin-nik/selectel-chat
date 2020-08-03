@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('~/assets/fonts/rubik/Rubik-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~/assets/fonts/rubik/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('~/assets/fonts/rubik/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('~/assets/fonts/rubik/Rubik-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Material Design Icons";
+  src: url("~/assets/fonts/materialdesignicons/materialdesignicons-webfont.eot?v=5.0.45");
+  src: url("~/assets/fonts/materialdesignicons/materialdesignicons-webfont.eot?#iefix&v=5.0.45") format("embedded-opentype"),
+       url("~/assets/fonts/materialdesignicons/materialdesignicons-webfont.woff2?v=5.0.45") format("woff2"),
+       url("~/assets/fonts/materialdesignicons/materialdesignicons-webfont.woff?v=5.0.45") format("woff"),
+       url("~/assets/fonts/materialdesignicons/materialdesignicons-webfont.ttf?v=5.0.45") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

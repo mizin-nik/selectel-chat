@@ -1,0 +1,38 @@
+<div class="row p-2">
+  <div class="grid">
+    <div class="col-10">
+      <h5>Настройки</h5>
+    </div>
+    <div class="col-2 text-right">
+      <div class="mdi mdi-close-thick cta" routerLink="/"></div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="UserModel">
+    <div class="grid pt-3">
+      <div class="col-2">
+        <p class="txt-bold">Имя</p>
+      </div>
+      <div class="col-10">
+        <p>{{UserModel.name}}</p>
+      </div>
+    </div>
+
+    <div class="grid pt-1">
+      <div class="col-2">
+        <p class="txt-bold">Id</p>
+      </div>
+      <div class="col-10">
+        <p>{{UserModel.id}}</p>
+      </div>
+    </div>
+
+    <div class="row p-1">
+      <div class="grid pt-3">
+        <div class="col-5 no-padding">
+          <button class="ui-button ui-button-default small" (click)="onChangeUserName(UserModel)">Сменить имя</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

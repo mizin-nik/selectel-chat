@@ -1,0 +1,10 @@
+<div class="pg-layer">
+  <div class="pg-wrapper">
+    <div class="pg-side">
+      <app-side-view></app-side-view>
+    </div>
+    <div class="pg-content"[@routerTransition]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+.ui-popup {
+  &-container {
+    position: fixed;
+    min-width: 450px;
+    max-height: 100%;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    overflow: auto;
+    scrollbar-width: none;
+    outline: none;
+  }
+  &-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-container-full {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    outline: none;
+  }
+
+  &-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.5);
+    @include transition-prop(background, .2s, linear);
+  }
+
+  &-wrapper {
+    background: #ffffff;
+    @include box-shadow(0, 0, 20px, -10px, #cccccc);
+    border-radius: 10px;
+    position: relative;
+    height: 100%;
+    box-shadow: 0 0 15px 0 #1a232c;
+  }
+
+  &-close {
+    & {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 8px;
+      right: 8px;
+      z-index: 9;
+      cursor: pointer;
+      outline: none;
+    }
+    &:before {
+      content: "\F0156";
+      display: inline-block;
+      font: normal normal normal 24px/1 "Material Design Icons";
+      font-size: 24px;
+      text-rendering: auto;
+      line-height: inherit;
+      -webkit-font-smoothing: antialiased;
+      color: $ctaHelper;
+      transition: .2s ease-in-out;
+      -webkit-transition: .2s ease-in-out;
+    }
+    &:hover:before {
+      color: $txtDefault;
+    }
+  }
+  &-close:hover {
+    background-position: 0 -36px;
+  }
+  &-content {
+    .component-insert:empty {
+      border: 1px solid #a6a6a6;
+      min-height: 300px;
+    }
+  }
+}
+
+.modal-overlay {
+  & {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 998;
+  }
+}

@@ -1,0 +1,38 @@
+.ui-animate {
+  &-zoom-in {
+    @include animation-name(zoomIn);
+    @include animation-duration(.15s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+    transition-property: all;
+  }
+  &-zoom-out {
+    @include animation-name(zoomOut);
+    @include animation-duration(.15s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+    transition-property: all;
+  }
+}
+
+@include keyframes(zoomIn) {
+  from {
+    @include transform(scale3d(0.95, 0.95, 0.95));
+    opacity: 0;
+  }
+  to {
+    @include transform(scale3d(1, 1, 1));
+    opacity: 1;
+  }
+}
+
+@include keyframes(zoomOut) {
+  from {
+    @include transform(scale3d(1, 1, 1));
+    opacity: 1;
+  }
+  to {
+    @include transform(scale3d(0.9, 0.9, 0.9));
+    opacity: 0;
+  }
+}

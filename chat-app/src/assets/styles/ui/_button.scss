@@ -1,0 +1,208 @@
+.ui-button {
+
+  // **************************
+  // Common
+  // **************************
+  & {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-radius: 2px;
+    margin: 0;
+  }
+
+  &,
+  & p,
+  & span,
+  & code,
+  & sub,
+  & sup {
+    font-family: Rubik, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $txtDefault;
+    font-size: $BaseFontSizeSm;
+    line-height: $BaseLineHeightSm;
+  }
+
+  &.small,
+  &.small p,
+  &.small span,
+  &.small code,
+  &.small sub,
+  &.small sup {
+    font-size: $BaseFontSizeSm - 1;
+    line-height: $BaseLineHeightSm - 1;
+  }
+
+  // **************************
+  // Default Button
+  // **************************
+  &-default {
+    & {
+      width: 100%;
+      min-width: 115px;
+      min-height: 35px;
+      background: #24313f;
+      padding: 0 10px;
+      transition: .1s ease-in-out;
+      -webkit-transition: .1s ease-in-out;
+    }
+    &,
+    & p,
+    & span,
+    & code,
+    & sub,
+    & sup {
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    // Default Button -- hover
+    // **************************
+    &:hover,
+    &.hover {
+      background: #24313f;
+      transition: .2s ease-in-out;
+      -webkit-transition: .2s ease-in-out;
+      box-shadow: 0 4px 4px rgba(2, 188, 212, 0.2);
+    }
+    &.small:hover,
+    &.small.hover {
+      background: #24313f;
+      box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+    }
+    @media (hover: none) {
+      &:hover {
+        background: $ctaDefault-hover;
+        transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+        box-shadow: 0 4px 4px rgba(2, 188, 212, 0.2);
+      }
+      &.small:hover {
+        background: $ctaDefault;
+        box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+      }
+    }
+
+    // Default Button -- active
+    // **************************
+    &:active,
+    &.active {
+      background: #314459;
+      transition: .1s ease-in-out;
+      -webkit-transition: .1s ease-in-out;
+      box-shadow: 0 4px 4px rgba(2, 188, 212, 0.2);
+    }
+    &.small:active,
+    &.small.active {
+      background: #314459;
+      box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+    }
+    @media (active: none) {
+      &:active {
+        background: #314459;
+      }
+      &.small:active {
+        box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+      }
+    }
+
+    // Default Button -- disabled
+    // **************************
+    &.disabled:hover,
+    &.disabled.small:hover {
+      background: $ctaDefault;
+    }
+  }
+
+  // **************************
+  // Addition Button
+  // **************************
+  &-addition {
+    & {
+      width: auto;
+      min-width: 115px;
+      min-height: 25px;
+      border: 1px solid #24313f;
+      padding: 0 5px;
+      transition: .1s ease-in-out;
+      -webkit-transition: .1s ease-in-out;
+    }
+    &,
+    & p,
+    & span,
+    & code,
+    & sub,
+    & sup {
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #24313f;
+    }
+
+    // Default Button -- hover
+    // **************************
+    &:hover,
+    &.hover {
+      background: rgb(36 49 63 / 10%);
+      transition: .2s ease-in-out;
+      -webkit-transition: .2s ease-in-out;
+      box-shadow: 0 4px 4px rgba(2, 188, 212, 0.2);
+    }
+    &.small:hover,
+    &.small.hover {
+      background: rgb(36 49 63 / 10%);
+      box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+    }
+    @media (hover: none) {
+      &:hover {
+        background: rgb(36 49 63 / 10%);
+        transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+        box-shadow: 0 4px 4px rgba(2, 188, 212, 0.2);
+      }
+      &.small:hover {
+        background: rgb(36 49 63 / 10%);
+        box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+      }
+    }
+
+    // Default Button -- active
+    // **************************
+    &:active,
+    &.active {
+      background: rgb(36 49 63 / 20%);
+      transition: .1s ease-in-out;
+      -webkit-transition: .1s ease-in-out;
+      box-shadow: 0 4px 4px rgba(2, 188, 212, 0.2);
+    }
+    &.small:active,
+    &.small.active {
+      background: rgb(36 49 63 / 20%);
+      box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+    }
+    @media (active: none) {
+      &:active {
+        background: rgb(36 49 63 / 20%)
+      }
+      &.small:active {
+        box-shadow: 0 4px 8px rgba(0, 158, 179, 0.2);
+      }
+    }
+
+    // Default Button -- disabled
+    // **************************
+    &.disabled:hover,
+    &.disabled.small:hover {
+      background: $ctaDefault;
+    }
+  }
+}
